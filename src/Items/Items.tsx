@@ -12,7 +12,7 @@ export interface ItemType {
   rating: Rating,
 }
 
-export type Rating = {
+type Rating = {
   rate: number,
   count: number,
 }
@@ -27,14 +27,13 @@ export default function Items(): JSX.Element {
     setItems(data);
   }
 
-  useEffect(() => {loadItems()}, []);
-  const params = useParams();
-  const { itemsId } = params;
-  console.log('Items itemsId.43:', itemsId, params);
+  useEffect(() => {loadItems()}, []);  
+  const { itemId } = useParams();
+  console.log('Items itemsId.43:', itemId);
 
   return (
     <div>
-      <ItemCard items={items} id={String(itemsId)} />
+      <ItemCard items={items} id={String(itemId)} />
     </div>
   );
 

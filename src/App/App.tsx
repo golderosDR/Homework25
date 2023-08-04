@@ -8,7 +8,7 @@ function App(): JSX.Element {
     <Routes>
       <Route path='/' element={<Layout />} />
       <Route path='/items' element={<Items />} />
-      <Route path='/items/:itemsId' element={<Items />} />
+      <Route path='/items/:itemId' element={<Items />} />
     </Routes>
   );
 }
